@@ -61,12 +61,6 @@ SELECT DISTINCT
 
 	T.teacherExperienceyears,
 
-/*	CASE
-		WHEN H.GenderCode IS NULL THEN 'N'
-		ELSE H.GenderCode END AS GenderCode,
-	CASE
-		WHEN H.GenderCode IS NULL THEN 'Not Provided'
-		ELSE H.Gender END AS Gender, */
 	H.EthnicityCode,
 	H.Ethnicity,
 	H.RaceCode,
@@ -74,18 +68,6 @@ SELECT DISTINCT
 	CASE 
 		WHEN H.RaceEthnicity IS NULL THEN '8'
 		ELSE H.RaceEthnicity END AS RaceEthnicity,
-/*
-	CASE 
-		WHEN H.DegreeCode IS NULL THEN SD.DegreeType
-		ELSE H.DegreeCode END AS Degree_Code,
-	CASE
-		WHEN H.Degree IS NULL THEN SD.Degree_Description
-		ELSE H.Degree END AS Degree,
-	CASE
-		WHEN H.Degree_Rank IS NULL THEN SD.Degree_Rank
-		ELSE H.Degree_Rank END AS Degree_Rank,
-
-		*/
 
 	GETDATE() AS DataAsOf
 
